@@ -3,6 +3,7 @@
 using namespace std;
 
 class stack;
+class queue;
 class Node
 {
 private:
@@ -10,6 +11,7 @@ private:
 	Node *next;
 
 	friend class stack;
+	friend class queue;
 };
 
 class stack
@@ -22,9 +24,24 @@ public:
 	void list();
 
 private:
-	Node *top;
-
 	Node *getNode();
+
+	Node *top;
+};
+
+class queue
+{
+public:
+	stack();
+	~stack();
+	void push(char input);
+	void pop();
+	void list();
+
+private:
+	Node *getNode();
+
+	Node *top;
 };
 
 int main(void)
